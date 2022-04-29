@@ -1,0 +1,79 @@
+[
+    {
+        "name":"Admin",
+        "email":"admin@gmail.com",
+        "phone":"18762513383",
+        "address":"15 St. James Street",
+        "password":"admin123"
+    },
+    {
+        "name":"Troy",
+        "email":"troy@gmail.com",
+        "phone":"187612345678",
+        "address":"West Village Lot 1",
+        "password":"troy123456"
+    },
+    {
+        "name":"Mike",
+        "email":"mike@gmail.com",
+        "phone":"18768765432",
+        "address":"West Village Lot 7",
+        "password":"mike123456"
+    },
+    {
+        "name":"Shan",
+        "email":"shan@gmail.com",
+        "phone":"18761342567",
+        "address":"West Village Lot 5",
+        "password":"shan123456"
+    },
+    {
+        "name":"Tina",
+        "email":"tina@gmail.com",
+        "phone":"18766572849",
+        "address":"West Village Lot 3",
+        "password":"tina123456"
+    },
+    {
+        "name":"Jimmy",
+        "email":"jimmy@gmail.com",
+        "phone":"18763037002",
+        "address":"West Village Lot 6",
+        "password":"jimmy123456"
+    },
+    {
+        "name":"Jessica",
+        "email":"jessica@gmail.com",
+        "phone":"18762985739",
+        "address":"West Village Lot 8",
+        "password":"jessica123456"
+    },
+    {
+        "name":"John",
+        "email":"john@gmail.com",
+        "phone":"18765669661",
+        "address":"West Village Lot 2",
+        "password":"john123456"
+    },
+    {
+        "name":"Bill",
+        "email":"bill@gmail.com",
+        "phone":"18764619741",
+        "address":"West Village Lot 4",
+        "password":"bill123456"
+    },
+    {
+        "name":"Mary",
+        "email":"mary@gmail.com",
+        "phone":"18761928375",
+        "address":"West Village Lot 20",
+        "password":"mary123456"
+    },
+    {
+        "name":"Suzie",
+        "email":"suzie@gmail.com",
+        "phone":"18763217895",
+        "address":"West Village Lot 11",
+        "password":"suzie123456"
+    }
+]

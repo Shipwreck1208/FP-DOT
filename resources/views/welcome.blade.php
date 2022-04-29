@@ -14,15 +14,22 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 
 </head>
-{{-- <body class="h-screen antialiased leading-none font-sans bg-orange-300"> --}}
 <body class="h-screen antialiased leading-none font-sans bg-gradient-to-t from-black to-yellow-300">
 
 
 <div class="flex flex-col">
     @if(Route::has('login'))
+    <div class="absolute top-0 left-0 mt-4 ml-4 ">
+        <span class="text-lg font-black bg-black p-2 rounded uppercase text-yellow-300 hover:text-white">{{ __('DOT') }}</span>
+
+    </div>
         <div class="absolute top-0 right-0 mt-4 mr-4 space-x-4 sm:mt-6 sm:mr-6 sm:space-x-6">
             @auth
-                <a href="{{ url('/home') }}" class="text-lg font-black bg-black p-2 rounded uppercase text-yellow-300 hover:text-white">{{ __('Home') }}</a>
+            @if (Auth::user()->is_admin == 1)
+            <a href="{{ url('/admin/home') }}" class="text-lg font-black bg-black p-2 rounded uppercase text-yellow-300 hover:text-white">{{ __('Admin') }}</a>
+            @else
+            <a href="{{ url('/home') }}" class="text-lg font-black bg-black p-2 rounded uppercase text-yellow-300 hover:text-white">{{ __('Home') }}</a>
+            @endif
             @else
                 <a href="{{ route('login') }}" class="text-lg font-black bg-black p-2 rounded uppercase text-yellow-300 hover:text-white">{{ __('Login') }}</a>
                 @if (Route::has('register'))
@@ -73,7 +80,6 @@
     </div>
 
     <div class="min-h-screen bg-black">
-    {{-- <div class="min-h-screen bg-gradient-to-b from-black to-yellow-300"> --}}
         <div class="h-full text-yellow-300">
             <div>
 
@@ -97,12 +103,9 @@
                  <div class="bg-yellow-300 text-black p-2 m-2 rounded-lg"><a href="/code">Software Development</a>
                 </div>
             </div>
-
             </marquee>
             </div>
             </div>
-
-        {{-- <h3 class=" font-black p-4 text-3xl">We offer a variety of Services:</h3> --}}
 
     </div>
     </div>
@@ -112,8 +115,6 @@
         <p class="border-r border-black p-2 m-2">"Make your work so great that they'll want to see it again."</p>
         <p class="p-2 m-2">"Quality is remembered long after the price is forgotten."</p>
       </div></div><br>
-      {{-- <div class="flex items-center justify-center bg-yellow-300 p-8 m-5 rounded-full text-lg font-black w-2/5 text-center transform hover: transition duration-500 hover:scale-150">
-    </div><br> --}}
     <div class="flex justify-center">
         <div class="bg-yellow-300 p-8 m-5 rounded-md text-lg font-black w-64 text-center transform hover: transition duration-500 hover:scale-150">
         <p>SATISFA<b class="text-red-600">C</b>TION</p>
@@ -150,12 +151,6 @@
               <a href="#" class="mr-4 text-sm text-gray-500 md:mr-6 dark:text-gray-400">About</a>
             </li>
             <li>
-              <a href="#" class="mr-4 text-sm text-gray-500 md:mr-6 dark:text-gray-400">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="#" class="mr-4 text-sm text-gray-500 md:mr-6 dark:text-gray-400">Licensing</a>
-            </li>
-            <li>
               <a href="mailto:D.o.t.royaltyproduction@gmail.com" class="text-sm text-gray-500 dark:text-gray-400">Contact</a>
             </li>
           </ul>
@@ -166,11 +161,9 @@
 </body>
 <style>
     /* CSS Document */
-
 marquee {
 	margin-top: 5px;
 	width: 50%;
 }
-
 </style>
 </html>

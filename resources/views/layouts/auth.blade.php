@@ -21,11 +21,8 @@
         <header class=" py-6">
             <div class="container mx-auto flex justify-between items-center px-6">
                 <div>
-                    @if (Auth::user()->is_admin == 1)
-                    <a href="/admin/home" class="text-lg font-black bg-black p-2 rounded uppercase text-yellow-300 hover:text-white">{{ __('DOT') }}</a>
-                    @else
-                    <a href="/home" class="text-lg font-black bg-black p-2 rounded uppercase text-yellow-300 hover:text-white">{{ __('DOT') }}</a>
-                    @endif
+                    <span class="text-lg font-black bg-black p-2 rounded uppercase text-yellow-300 hover:text-white">{{ __('DOT') }}</span>
+
                 </div>
                 <nav class="space-x-4 text-sm">
                     @guest
@@ -52,7 +49,7 @@
 
     <footer class="p-4  bg-white md:px-6 md:py-8 dark:bg-gray-800">
         <div class="flex items-center justify-between">
-          <a href="/" class="flex items-center mb-4">
+          <a href="/" target="_blank" class="flex items-center mb-4">
             <img src="{{ asset('image\dot logo.jpg') }}" class="mr-4 h-8 rounded-md" alt="Dot Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white uppercase">dot</span>
           </a>

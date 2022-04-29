@@ -39,8 +39,8 @@
             </p>
             </div>
 
-            <div class="container mx-auto max-w-xl">
-                <div class="flex p-3 m-5 border border-black rounded-xl">
+            <div class="container mx-auto ">
+                <div class="grid grid-cols-3 gap-6 p-3 m-5 border border-black rounded-xl">
                     @foreach ($events as $event)
                     @if (Auth::user()->name === $event->name)
                     <div class="flex justify-center p-5 m-4 border border-black bg-white rounded-xl">
@@ -52,13 +52,18 @@
                             <span class="m-2">{{ $event->date}}</span>
                         </div>
                         <div class="flex m-2">
+                            <strong class="m-1">Service:</strong>
                             <span class="m-2">{{ $event->service}}</span>
+                            <strong class="m-1">Hours:</strong><br>
                             <span class="m-2">{{ $event->hours}}</span>
                         </div>
                         <div class="flex m-2">
+                            <strong class="m-1">Amount:</strong><br>
                             <span class="m-2">{{ $event->amount}}</span>
+                            <strong class="m-1">Price:</strong><br>
                             <span class="m-2">{{ $event->cost}}</span>
                         </div>
+                        <strong class="m-1">Location:</strong><br>
                             <span class="m-2">{{ $event->address}}</span>
                         </div>
                     </div>

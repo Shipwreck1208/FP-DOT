@@ -64,6 +64,7 @@
                 <strong class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">Capacity:</strong>
                 <select class="p-1 rounded" name="amount">
                     <option disabled selected >-- Select One --</option>
+                    <option value="N/A">N/A</option>
                     <option value="50 less">50 less</option>
                     <option value="51 -100">51 -100</option>
                     </select>

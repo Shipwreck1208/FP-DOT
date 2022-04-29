@@ -22,28 +22,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
-});
-
 Auth::routes();
 
-Route::resource('event', EventController::class);
-Route::resource('products', ProductController::class);
-Route::resource('categories', CategoryController::class);
-
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/home', [HomeController::class, 'home'])->name('home');
-Route::get('/events', [HomeController::class, 'event'])->name('events');
+Route::resource('event', EventController::class)->middleware('is_admin');
+Route::resource('products', ProductController::class)->middleware('is_admin');
+Route::resource('categories', CategoryController::class)->middleware('is_admin');
 Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home')
 ->middleware('is_admin');
 Route::get('/users', [UserController::class, 'users'])->name('users')
 ->middleware('is_admin');
-Route::get('/event/create', [UserController::class, 'user'])->name('event.create')
-->middleware('is_admin');
 Route::get('/event/create', [CategoryController::class, 'cat'])->name('event.create')
 ->middleware('is_admin');
 
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/events', [HomeController::class, 'event'])->name('events');
 Route::get('/catering', [ProductController::class, 'cater'])->name('catering');
 Route::get('/music', [ProductController::class, 'music'])->name('music');
 Route::get('/code', [ProductController::class, 'code'])->name('code');
