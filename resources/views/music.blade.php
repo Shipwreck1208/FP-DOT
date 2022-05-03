@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.out')
 
 @section('content')
        <div class="flex justify-center font-black text-4xl m-5"> <h1>Music</h1></div>
