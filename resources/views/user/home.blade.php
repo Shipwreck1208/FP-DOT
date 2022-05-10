@@ -42,7 +42,7 @@
                     @foreach ($products as $product)
                     <div class="flex justify-center p-5 m-4 border border-black bg-white rounded-xl">
                         <div class="text-2xl font-medium text-center">
-                            <span>{{ $product->category}}</span>
+                            <span>{{ $product->category_id}}</span>
                             <img class="mt-6 rounded-2xl" src="/image/{{ $product->image }}" width="300px">
                             <span>{{ $product->detail}}</span>
                         </div>

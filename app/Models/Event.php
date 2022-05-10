@@ -10,6 +10,11 @@ class Event extends Model
     use HasFactory;
 
     protected $fillable = [
-        'date', 'name', 'service', 'hours', 'amount', 'address', 'cost'
+        'date', 'name', 'category_id', 'hours', 'amount', 'address', 'cost'
     ];
+
+    public function category()
+    {
+        return $this->hasMany(Category::class);
+    }
 }

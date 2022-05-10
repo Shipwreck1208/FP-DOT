@@ -36,7 +36,7 @@
         <tr class="bg-white border-b ">
             <td class="py-3 px-6 text-md font-medium uppercase">{{ $product->id}}</td>
             <td  class="text-sm font-medium"><img src="/image/{{ $product->image }}" width="200px"></td>
-            <td class="py-3 px-6 text-md font-medium uppercase">{{ $product->category }}</td>
+            <td class="py-3 px-6 text-md font-medium uppercase">{{ $product->category_id }}</td>
             <td class="flex m-4 text-md font-medium">{{ $product->detail }}</td>
             <td>
                 <form action="{{ route('products.destroy',$product->id) }}" method="POST">

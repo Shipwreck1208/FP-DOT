@@ -46,8 +46,8 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        return view('products.create',compact('categories'));
+        $products = Category::all();
+        return view('products.create',compact('products'));
     }
 
     /**
@@ -59,7 +59,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'category' =>'required',
+            'category_id' =>'required',
             'detail' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);

@@ -31,10 +31,10 @@
         <div class="flex justify-center m-3">
             <div class="p-3">
                 <strong class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">Category:</strong>
-                <select class="p-1 rounded" name="category" type="text">
+                <select class="p-1 rounded" name="category_id" type="text">
                     <option disabled selected> -- Select an Category -- </option>
-                    @foreach($categories as $category)
-                    <option value={{$category->name}}>
+                    @foreach($products as $category)
+                    <option value={{$category->id}}>
                         {{$category->name}}
                     </option>
                     @endforeach

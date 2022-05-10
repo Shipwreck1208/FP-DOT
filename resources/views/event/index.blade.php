@@ -41,7 +41,7 @@
             <td class="py-3 px-6 text-md font-medium uppercase">{{ $event->id}}</td>
             <td class="m-4 text-md font-medium">{{ $event->date }}</td>
             <td class="m-4 text-md font-medium">{{ $event->name }}</td>
-            <td class="m-4 text-md font-medium">{{ $event->service }}</td>
+            <td class="m-4 text-md font-medium">{{ $event->category_id }}</td>
             <td class="m-4 text-md font-medium">{{ $event->hours }}</td>
             <td class="m-4 text-md font-medium">{{ $event->amount }}</td>
             <td class="m-4 text-md font-medium">{{ $event->address }}</td>

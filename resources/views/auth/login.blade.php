@@ -4,9 +4,9 @@
 <main class="container mx-auto my-auto max-w-lg mt-10">
     <div class="flex">
         <div class="w-full">
-            <section class="flex flex-col bg-white mb-40">
+            <section class="flex flex-col bg-white mb-40 rounded-xl">
 
-                <header class="font-bold bg-gray-200 text-gray-700 py-5 px-6 ">
+                <header class="font-bold bg-gray-200 text-gray-700 py-5 px-6 rounded-t-xl">
                     {{ __('Login') }}
                 </header>
 
@@ -18,24 +18,17 @@
                             {{ __('E-Mail Address') }}:
                         </label>
 
-                        {{-- <input id="email" type="email"
-                            class="form-input w-full @error('email') border-red-500 @enderror" name="email"
-                            value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                        @error('email')
-                        <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
-                        </p>
-                        @enderror --}}
                         <input id="email" type="email"
-                            class="form-input w-full @error('email') border-red-500 @enderror" name="email"
-                            value="{{ old('email') }}" required autocomplete="email" autofocus>
-
+                            class="form-input w-full @error('email') bg-red-500 @enderror" name="email"
+                            value="{{ old('email') }}"  autocomplete="email" autofocus>
+                        @if($errors->any())
                         @error('email')
-                        <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
+                        <p class="border border-black bg-red-500 animate-pulse mt-2 rounded-3xl text-center p-2 mx-auto">
+                            <span class="font-bold mb-2 sm:mb-4">{{ $message }}</span>
                         </p>
                         @enderror
+                        @endif
+
                     </div>
 
                     <div class="flex flex-wrap">
@@ -44,12 +37,12 @@
                         </label>
 
                         <input id="password" type="password"
-                            class="form-input w-full @error('password') border-red-500 @enderror" name="password"
-                            required>
+                            class="form-input w-full @error('password') bg-red-500 @enderror" name="password"
+                            >
 
                         @error('password')
-                        <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
+                        <p class="border border-black bg-red-500 animate-pulse mt-2 rounded-3xl text-center p-2 mx-auto">
+                            <span class="font-bold mb-2 sm:mb-4">{{ $message }}</span>
                         </p>
                         @enderror
                     </div>

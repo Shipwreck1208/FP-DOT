@@ -38,6 +38,7 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
     public function login(Request $request){
         $input = $request->all();
         $this->validate($request,[
@@ -51,7 +52,9 @@ class LoginController extends Controller
                 return redirect()->route('home');
             }
         }else{
-            return redirect()->route('login')->with('error','Enter a valid email and password.');
+            return back()->withErrors([
+                'email' => 'The provided credentials do not match our records.',]);
+            // return redirect()->route('login')->with('error','Enter a valid email or password.');
         }
     }
 }

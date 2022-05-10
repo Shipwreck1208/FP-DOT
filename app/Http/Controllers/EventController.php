@@ -22,13 +22,6 @@ class EventController extends Controller
         return view('event.index',compact('events'));
     }
 
-    public function event()
-    {
-        $users = Event::all();
-
-        return view('event.create',compact('users'));
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -50,7 +43,7 @@ class EventController extends Controller
         $request->validate([
             'name' => 'required',
             'date' => 'required',
-            'service' => 'required',
+            'category_id' => 'required',
             'hours' => 'required',
             'amount' => 'required',
             'address' => 'required',
@@ -81,10 +74,11 @@ class EventController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $categories)
+    public function edit(Event $event)
     {
-        $categories = Category::all();
-        return view('event.edit',compact('categories'));
+        // $event = Event::all();
+        return view('event.edit',compact('event'));
+        // dd($event);
     }
 
     /**
@@ -99,9 +93,7 @@ class EventController extends Controller
         $request->validate([
             'name' => 'required',
             'date' => 'required',
-            'service' => 'required',
             'hours' => 'required',
-            'amount' => 'required',
             'address' => 'required',
             'cost' => 'required',
         ]);

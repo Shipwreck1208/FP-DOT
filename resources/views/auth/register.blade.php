@@ -20,12 +20,12 @@
                             {{ __('Name') }}:
                         </label>
 
-                        <input id="name" type="text" class="form-input w-full @error('name')  border-red-500 @enderror"
-                            name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Your Name">
+                        <input id="name" type="text" class="form-input w-full @error('name')  bg-red-500 @enderror"
+                            name="name" value="{{ old('name') }}" autocomplete="name" autofocus placeholder="Your Name">
 
                         @error('name')
-                        <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
+                        <p class="border border-black bg-red-500 animate-pulse mt-2 rounded-3xl text-center p-2 mx-auto">
+                            <span class="font-bold mb-2 sm:mb-4">{{ $message }}</span>
                         </p>
                         @enderror
                     </div>
@@ -36,12 +36,12 @@
                         </label>
 
                         <input id="email" type="email"
-                            class="form-input w-full @error('email') border-red-500 @enderror" name="email"
-                            value="{{ old('email') }}" required autocomplete="email" placeholder="Your Email">
+                            class="form-input w-full @error('email') bg-red-500 @enderror" name="email"
+                            value="{{ old('email') }}" autocomplete="email" placeholder="Your Email">
 
                         @error('email')
-                        <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
+                        <p class="border border-black bg-red-500 animate-pulse mt-2 rounded-3xl text-center p-2 mx-auto">
+                            <span class="font-bold mb-2 sm:mb-4">{{ $message }}</span>
                         </p>
                         @enderror
                     </div>
@@ -53,12 +53,12 @@
                             {{ __('Phone Number') }}:
                         </label>
 
-                        <input id="phone" type="text" class="form-input w-full @error('phone')  border-red-500 @enderror"
-                            name="phone" value="{{ old('phone') }}" required autocomplete="phone" autofocus placeholder="Your Mobile">
+                        <input id="phone" type="text" class="form-input w-full @error('phone')  bg-red-500 @enderror"
+                            name="phone" value="{{ old('phone') }}" autocomplete="phone" autofocus placeholder="Your Mobile">
 
                         @error('phone')
-                        <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
+                        <p class="border border-black bg-red-500 animate-pulse mt-2 rounded-3xl text-center p-2 mx-auto">
+                            <span class="font-bold mb-2 sm:mb-4">{{ $message }}</span>
                         </p>
                         @enderror
                     </div>
@@ -69,12 +69,12 @@
                         </label>
 
                         <input id="address" type="text"
-                            class="form-input w-full @error('address') border-red-500 @enderror" name="address"
-                            value="{{ old('address') }}" required autocomplete="address" placeholder="Your Address">
+                            class="form-input w-full @error('address') bg-red-500 @enderror" name="address"
+                            value="{{ old('address') }}" autocomplete="address" placeholder="Your Address">
 
                         @error('address')
-                        <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
+                        <p class="border border-black bg-red-500 animate-pulse mt-2 rounded-3xl text-center p-2 mx-auto">
+                            <span class="font-bold mb-2 sm:mb-4">{{ $message }}</span>
                         </p>
                         @enderror
                     </div>
@@ -87,12 +87,12 @@
                         </label>
 
                         <input id="password" type="password"
-                            class="form-input w-full @error('password') border-red-500 @enderror" name="password"
-                            required autocomplete="new-password" placeholder="Your Password">
+                            class="form-input w-full @error('password') bg-red-500 @enderror" name="password"
+                         autocomplete="new-password" placeholder="Your Password">
 
                         @error('password')
-                        <p class="text-red-500 text-xs italic mt-4">
-                            {{ $message }}
+                        <p class="border border-black bg-red-500 animate-pulse mt-2 rounded-3xl text-center p-2 mx-auto">
+                            <span class="font-bold mb-2 sm:mb-4">{{ $message }}</span>
                         </p>
                         @enderror
                     </div>
@@ -103,7 +103,7 @@
                         </label>
 
                         <input id="password-confirm" type="password" class="form-input w-full"
-                            name="password_confirmation" required autocomplete="new-password" placeholder="Re-Enter Your Password">
+                            name="password_confirmation" autocomplete="new-password" placeholder="Re-Enter Your Password">
                     </div>
                     </div>
 

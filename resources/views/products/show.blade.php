@@ -16,7 +16,7 @@
         <div class="flex justify-center p-5">
             <div class="text-2xl font-medium m-3">
                 <strong class="font-extrabold">Category:</strong>
-                {{ $product->category }}
+                {{ $product->category_id }}
             </div>
         </div>
         <div class="flex justify-center p-5">

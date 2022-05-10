@@ -38,23 +38,15 @@
             <div class="p-3">
                 <strong class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">Name:</strong>
                 <input type="text" name="name" class="form-input" placeholder="Name">
-                {{-- <select class="p-1 rounded" name="service" type="text">
-                    <option disabled selected> -- Select an Service -- </option>
-                    @foreach($users as $user)
-                    <option value={{$user->name}}>
-                        {{$user->name}}
-                    </option>
-                    @endforeach
-                </select> --}}
             </div>
         </div>
         <div class="flex justify-center m-3">
             <div class="p-3">
                 <strong class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">Required Service:</strong>
-                <select class="p-1 rounded" name="service" type="text">
+                <select class="p-1 rounded" name="category_id" type="text">
                     <option disabled selected> -- Select an Service -- </option>
                     @foreach($categories as $category)
-                    <option value={{$category->name}}>
+                    <option value={{$category->id}}>
                         {{$category->name}}
                     </option>
                     @endforeach

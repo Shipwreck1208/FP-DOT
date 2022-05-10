@@ -32,7 +32,7 @@
         <div class="flex justify-center p-3">
             <div class="text-2xl font-medium m-3">
                 <strong class="font-extrabold">Service:</strong>
-                {{ $event->service }}
+                {{ $event->category_id }}
             </div>
             <div class="text-2xl font-medium m-3">
                 <strong class="font-extrabold">Hours:</strong>

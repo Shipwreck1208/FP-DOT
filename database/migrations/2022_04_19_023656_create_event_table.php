@@ -17,7 +17,7 @@ class CreateEventTable extends Migration
             $table->id();
             $table->date('date');
             $table->string('name');
-            $table->string('service');
+            $table->unsignedBigInteger('category_id');
             $table->string('hours');
             $table->string('amount');
             $table->string('address');
