@@ -53,7 +53,7 @@
                         </div>
                         <div class="flex m-2">
                             <strong class="m-1">Service:</strong>
-                            <span class="m-2">{{ $event->service}}</span>
+                            <span class="m-2">{{ $event->category_id}}</span>
                             <strong class="m-1">Hours:</strong><br>
                             <span class="m-2">{{ $event->hours}}</span>
                         </div>

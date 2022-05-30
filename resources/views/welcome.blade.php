@@ -20,8 +20,9 @@
 <div class="flex flex-col">
     @if(Route::has('login'))
     <div class="absolute top-0 left-0 mt-4 ml-4 ">
-        <span class="text-lg font-black bg-black p-2 rounded uppercase text-yellow-300 hover:text-white">{{ __('DOT') }}</span>
-
+        <a href="/">
+            <span class="text-lg font-black bg-black p-2 rounded uppercase text-yellow-300 hover:text-white">{{ __('DOT') }}</span>
+        </a>
     </div>
         <div class="absolute top-0 right-0 mt-4 mr-4 space-x-4 sm:mt-6 sm:mr-6 sm:space-x-6">
             @auth
@@ -100,8 +101,8 @@
                  <div class="bg-yellow-300 text-black p-2 m-2 rounded-lg"><a href="/music">Music</a>
                 </div>
 
-                 <div class="bg-yellow-300 text-black p-2 m-2 rounded-lg"><a href="/code">Software Development</a>
-                </div>
+                 {{-- <div class="bg-yellow-300 text-black p-2 m-2 rounded-lg"><a href="/code">Software Development</a>
+                </div> --}}
             </div>
             </marquee>
             </div>
@@ -142,7 +143,7 @@
 
     <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-gray-800">
         <div class="sm:flex sm:items-center sm:justify-between">
-          <a href="/" target="_blank" class="flex items-center mb-4 sm:mb-0">
+          <a href="/" class="flex items-center mb-4 sm:mb-0">
             <img src="{{ asset('image\dot logo.jpg') }}" class="mr-4 h-8 rounded-md" alt="Dot Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white uppercase">dot</span>
           </a>

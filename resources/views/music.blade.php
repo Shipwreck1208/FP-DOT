@@ -10,7 +10,7 @@
 <div class="flex justify-center p-3 m-5 ">
 
     @foreach ($products as $product)
-    @if ($product->category == 'Music')
+    @if ($product->category_id == '2')
     <div class="p-5">
         <div class="text-2xl font-medium">
             <img src="/image/{{ $product->image }}" width="300px">
