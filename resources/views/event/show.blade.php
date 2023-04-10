@@ -3,16 +3,16 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="m-5 text-3xl font-bold">
+            <div class="m-5 text-gray-800 text-3xl font-bold">
                 <h2> Show Event</h2>
             </div>
             <div class="">
-                <a class="bg-black text-yellow-300 hover:text-white p-3 m-3 rounded float-right font-bold" href="{{ route('event.index') }}"> Back</a>
+                <a class="bg-gray-300 p-3 text-gray-800 m-3 rounded border border-gray-800 hover:bg-gray-800 hover:text-gray-300 float-right font-bold" href="{{ route('event.index') }}"> Back</a>
             </div>
         </div>
     </div>
 
-    <div class="mx-auto my-40 border border-black rounded max-w-3xl">
+    <div class="mx-auto my-40 text-gray-800 border border-black rounded max-w-3xl">
         <div class="flex justify-center p-3">
             <div class="text-2xl font-medium m-3">
                 <strong class="font-extrabold">Date:</strong>

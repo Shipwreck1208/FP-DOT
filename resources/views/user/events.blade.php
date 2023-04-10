@@ -1,7 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="sm:container sm:mx-auto sm:mt-10">
+
+<div class="flex justify-center font-black uppercase bg-gradient-to-r from-black to-red-400 h-96 mx-32 my-9 rounded-3xl">
+    <div >
+        <div>
+            <p class="lg:text-4xl md:text-2xl text-center m-28 sm:m-20 text-gray-300 ">Orders Page</p>
+        </div>
+        <p class="lg:text-6xl md:text-4xl w-48 sm:w-auto text-center m-28 sm:m-20 bg-gray-300 border border-2 border-gray-900 p-2 rounded-2xl animate-pulse">Coming Soon...</p>
+    </div>
+</div>
+
+{{-- <main class="sm:container sm:mx-auto sm:mt-10">
     <div class="w-full sm:px-6">
 
         @if (session('status'))
@@ -18,32 +28,32 @@
 
         <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-lg">
 
-            <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
+            <header class="font-semibold bg-gray-300 text-gray-800 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
                 Dashboard
             </header>
 
-            <div class="w-full p-6">
-                <p class="text-gray-700">
+            <div class="bg-gray-400 w-full p-6">
+                <p class="text-gray-800">
                     Welcome {{ Auth::user()->name }} <br><br>
                     You are logged in!
 
                 </p>
             </div>
         </section>
-        <a class="bg-black text-yellow-300 hover:text-white p-2 uppercase rounded-lg" href="home">Back</a>
+        <a class="bg-gray-300 p-2 text-gray-800 border border-gray-800 m-3 uppercase rounded-lg" href="home">Back</a>
 
         <div class="container mx-auto m-3 p-3 border border-red-500 w-72 bg-red-500 rounded-xl animate-pulse">
             <p class="text-center font-extrabold"> For Possible Changes <br>
-                <span class="text-white font-black text-lg"><a href="tel:8762153383">Call</a></span> OR
-                <span class="text-white font-black text-lg"><a href="mailto:D.o.t.royaltyproduction@gmail.com">Email</a></span>
+                <span class="text-white font-black text-lg"><a href="tel:8765663601">Call</a></span> OR
+                <span class="text-white font-black text-lg"><a href="mailto:gmail.com">Email</a></span>
             </p>
             </div>
 
-            <div class="container mx-auto ">
-                <div class="grid grid-cols-3 gap-6 p-3 m-5 border border-black rounded-xl">
+            {{-- <div class="container mx-auto ">
+                <div class="grid grid-cols-3 gap-6 p-3 m-5 bg-gray-300 text-gray-800 border border-gray-800 rounded-xl">
                     @foreach ($events as $event)
                     @if (Auth::user()->name === $event->name)
-                    <div class="flex justify-center p-5 m-4 border border-black bg-white rounded-xl">
+                    <div class="flex justify-center p-5 m-4 bg-gray-800 text-gray-300 border border-gray-400 rounded-xl">
                         <div class="text-2xl font-medium text-center">
                         <div clas>
                             <span class="uppercase">{{ $event->name}}</span>
@@ -74,6 +84,6 @@
 
 
     </div>
-</main>
+</main> --}}
 
 @endsection

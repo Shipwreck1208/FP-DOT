@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-lg-12 margin-tb">
         <div class="m-5 text-3xl font-bold">
-            <h2>Add Photo</h2>
+            <h2>Add Product</h2>
         </div>
     </div>
 </div>
@@ -53,10 +53,25 @@
                 <input type="file" name="image" class="form-input" placeholder="image">
             </div>
         </div>
-        <div class=" text-center">
-            <a class="bg-black text-yellow-300 hover:text-white p-3 m-3 rounded float-right font-bold" href="{{ route('products.index') }}"> Back</a>
+        <div class="flex justify-center m-3">
+            <div class="p-3">
+                <strong class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">Price:</strong>
+                <input type="text" class="form-input" style="height:50px" name="price" placeholder="Price"></input>
+            </div>
 
-                <button type="submit" class="font-bold p-3 m-3 rounded-lg text-base bg-black text-yellow-300 hover:text-white">Add</button>
+            <div class="p-3">
+                <strong class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">Status:</strong>
+                <select class="p-1 rounded" name="status" type="text">
+                    <option disabled selected> -- Select a Status -- </option>
+                    <option value="In-Stock">In-Stock</option>
+                    <option value="Out-Stock">Out-Stock</option>
+                </select>
+            </div>
+        </div>
+        <div class=" text-center">
+            <a class="bg-gray-300 p-3 text-gray-800 m-3 rounded border border-gray-800 hover:bg-gray-800 hover:text-gray-300 float-right font-bold" href="{{ route('products.index') }}"> Back</a>
+
+                <button type="submit" class="font-bold bg-gray-300 p-3 text-gray-800 m-3 rounded-lg text-base border border-gray-800 hover:bg-gray-800 hover:text-gray-300">Add</button>
         </div>
     </div>
 

@@ -4,14 +4,14 @@
     <div class="">
     <div class="">
         <div class=" margin-tb">
-            <div class="flex justify-center p-2 m-5 text-3xl font-black">
+            <div class="flex justify-center p-2 m-5 text-3xl font-black text-gray-800">
                 <h2>Categories "<span class="font-black animate-pulse">{{$categories->count();}}</span>"</h2>
 
             </div>
 
             <div class="pull-right">
-                <a class="bg-black text-yellow-300 hover:text-white p-3 m-3 rounded float-right font-bold" href="{{ route('categories.create') }}"> Add Category</a>
-                <a class="bg-black text-yellow-300 hover:text-white p-3 m-3 rounded float-right font-bold" href="/admin/home">Back</a>
+                <a class="bg-gray-300 p-3 text-gray-800 m-3 rounded float-right font-bold" href="{{ route('categories.create') }}"> Add Category</a>
+                <a class="bg-gray-300 p-3 text-gray-800 m-3 rounded float-right font-bold" href="/admin/home">Back</a>
             </div>
         </div>
     </div>
@@ -23,15 +23,15 @@
     @endif
 
     <table class="mx-14 my-44 w-11/12">
-    <thead class="bg-gray-200">
-        <tr>
+    <thead class="bg-gray-300">
+        <tr class="text-gray-800">
             <th class="py-3 px-6 text-md font-bold uppercase">#</th>
             <th class="py-3 px-6 text-md font-bold uppercase">Name</th>
             <th class="py-3 px-6 text-md font-bold uppercase" width="280px">Action</th>
         </tr>
         </thead>
         @foreach ($categories as $category)
-        <tr class="bg-white border-b ">
+        <tr class="bg-gray-400 text-gray-800 border-b ">
             <td class="py-3 px-6 text-md font-medium uppercase">{{ $category->id}}</td>
             <td class="flex m-4 text-md font-medium">{{ $category->name }}</td>
             <td>

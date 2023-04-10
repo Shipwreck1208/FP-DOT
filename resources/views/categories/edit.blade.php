@@ -3,7 +3,7 @@
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
-        <div class="m-5 text-3xl font-bold">
+        <div class="m-5 text-gray-800 text-3xl font-bold">
             <h2> Edit Category</h2>
         </div>
     </div>
@@ -20,9 +20,9 @@
     </div>
     @endif
 
-    <div class="flex justify-center">
+    <div class="flex justify-center ">
         <div class="">
-            <section class="flex flex-col my-44 bg-white p-4 sm:border-1 sm:rounded-md sm:shadow-lg">
+            <section class="flex flex-col my-44 bg-gray-300 p-4 sm:border-1 sm:rounded-md sm:shadow-lg">
 
     <form action="{{ route('categories.update',$category->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -31,14 +31,14 @@
         <div class="">
             <div class="flex justify-center m-3">
                 <div class="p-3">
-                    <strong class="block text-gray-700 text-sm font-bold mb-2 sm:mb-4">Category:</strong>
+                    <strong class="block text-gray-800 text-sm font-bold mb-2 sm:mb-4">Category:</strong>
                     <input type="text" name="name" value="{{ $category->name }}" class="form-input">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <a class="bg-black text-yellow-300 hover:text-white p-3 m-3 rounded float-right font-bold" href="{{ route('categories.index') }}"> Back</a>
+                <a class="bg-gray-300 p-3 text-gray-800 m-3 rounded border border-gray-800 hover:bg-gray-800 hover:text-gray-300 float-right font-bold" href="{{ route('categories.index') }}"> Back</a>
 
-              <button type="submit" class="font-bold p-3 m-3 rounded-lg text-base bg-black text-yellow-300 hover:text-white">Update</button>
+              <button type="submit" class="font-bold p-3 m-3 rounded-lg text-base bg-gray-300 text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-gray-300">Update</button>
             </div>
         </div>
 

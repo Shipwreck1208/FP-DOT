@@ -40,3 +40,4 @@ Route::get('/events', [HomeController::class, 'event'])->name('events');
 Route::get('/catering', [ProductController::class, 'cater'])->name('catering');
 Route::get('/music', [ProductController::class, 'music'])->name('music');
 Route::get('/code', [ProductController::class, 'code'])->name('code');
+Route::get('/', [ProductController::class, 'main'])->name('welcome');

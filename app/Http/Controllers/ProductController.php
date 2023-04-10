@@ -38,6 +38,12 @@ class ProductController extends Controller
 
         return view('code',compact('products'));
     }
+    public function main()
+    {
+        $products = Product::all();
+
+        return view('welcome',compact('products'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -62,6 +68,8 @@ class ProductController extends Controller
             'category_id' =>'required',
             'detail' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'price' => 'required',
+            'status' => 'required',
         ]);
 
         $input = $request->all();
@@ -76,7 +84,7 @@ class ProductController extends Controller
         Product::create($input);
 
         return redirect()->route('products.index')
-                        ->with('success','Photo added successfully.');
+                        ->with('success','Product added successfully.');
     }
 
     /**
@@ -111,7 +119,9 @@ class ProductController extends Controller
     public function update(Request $request, Product $product)
     {
         $request->validate([
-            'detail' => 'required'
+            'detail' => 'required',
+            'price' => 'required',
+            'status' => 'required'
         ]);
 
         $input = $request->all();
@@ -128,7 +138,7 @@ class ProductController extends Controller
         $product->update($input);
 
         return redirect()->route('products.index')
-                        ->with('success','Photo updated successfully');
+                        ->with('success','Product updated successfully');
     }
 
     /**
@@ -142,6 +152,6 @@ class ProductController extends Controller
         $product->delete();
 
         return redirect()->route('products.index')
-                        ->with('success','Photo deleted successfully');
+                        ->with('success','Product deleted successfully');
     }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="{{ asset('image\dot logo.jpg') }}">
+    <link rel="shortcut icon" href="{{ asset('image\spop1.jpeg') }}">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -22,7 +22,7 @@
             <div class="container mx-auto flex justify-between items-center px-6">
                 <div>
                     <a href="/">
-                        <span class="text-lg font-black bg-black p-2 rounded uppercase text-yellow-300 hover:text-white">{{ __('DOT') }}</span>
+                        <span class="text-lg font-black bg-black p-2 rounded uppercase text-yellow-300 hover:text-white">{{ __('SPOP-LINE') }}</span>
                     </a>
                 </div>
                 <nav class="space-x-4 text-sm">

@@ -18,38 +18,43 @@
 
         <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-lg">
 
-            <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
+            <header class="font-semibold bg-gray-300 text-gray-800 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
                 Dashboard
             </header>
 
-            <div class="w-full p-6">
-                <p class="text-gray-700">
+            <div class="BG-GRAY-400 w-full p-6">
+                <p class="text-gray-800">
                     Welcome {{ Auth::user()->name }} <br><br>
                     You are logged in!
 
                 </p>
             </div>
         </section>
-        <a class="bg-black text-yellow-300 hover:text-white p-2 uppercase rounded-lg" href="events">My Events</a>
+        <a class="bg-gray-300 p-2 text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-gray-300 uppercase rounded-lg" href="events">My Orders</a>
         <div class="m-3">
             {{-- <span class="p-2 m-2">Services </span><span class="bg-gray-700 rounded text-white p-1 font-black animate-pulse">{{$products->count();}}</span> --}}
 
         </div>
 
 
-            <div class="container mx-auto">
-                <div class="grid grid-cols-3 gap-6 p-3 m-5 border border-black rounded-xl">
-                    @foreach ($products as $product)
-                    <div class="flex justify-center p-5 m-4 border border-black bg-white rounded-xl">
-                        <div class="text-2xl font-medium text-center">
-                            <span>{{ $product->category_id}}</span>
-                            <img class="mt-6 rounded-2xl" src="/image/{{ $product->image }}" width="300px">
-                            <span>{{ $product->detail}}</span>
-                        </div>
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-3 gap-6 md:grid-cols-2 grid-cols-1 p-3 m-5 border border-black rounded-xl">
+                @foreach ($products as $product)
+                <div class="flex justify-center p-5 m-4 bg-gray-300 text-gray-800 border border-gray-800 rounded-xl">
+                    <div class="text-2xl font-medium text-center">
+                        {{-- <span>{{ $product->category_id}}</span> --}}
+                        <img class="w-48 h-48 rounded-full mx-auto" src="/image/{{ $product->image }}">
+                        <span>{{ $product->detail}}</span>
+                        <span>{{ $product->price}}</span>
+                       <div class="flex m-2">
+                        <a class="bg-blue-400 text-gray-800 p-2 m-2 rounded-2xl" href="/image/{{ $product->image }}">Preview</a>
+                        <span class="bg-blue-400 text-gray-800 p-2 m-2 rounded-2xl">{{ $product->status}}</span>
+                       </div>
                     </div>
-                    @endforeach
                 </div>
+                @endforeach
             </div>
+        </div>
 
     </div>
 </main>
